@@ -9,5 +9,6 @@ const articleCollection = defineCollection({
   });
 
 export const collections = {
+    // ${workingDirectory}/src/content/ninety/
     'ninety': articleCollection,
 };

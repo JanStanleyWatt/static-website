@@ -25,3 +25,7 @@ pnpm-debug.log*
 
 # vscode setting folder
 .vscode/
+
+# content and ezmple directory
+src/content/ninety/example.md
+!src/content/config.ts
