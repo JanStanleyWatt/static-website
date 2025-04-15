@@ -10,7 +10,12 @@
   },
   "dependencies": {
     "astro": "^5.5.3",
+    "github-markdown-css": "^5.8.1",
+    "highlight.js": "^11.11.1",
     "marked": "^14.1.4",
-    "marked-aozora": "^1.2.2"
+    "marked-alert": "^2.1.2",
+    "marked-aozora": "^1.2.2",
+    "marked-footnote": "^1.2.4",
+    "marked-highlight": "^2.2.1"
   }
 }
