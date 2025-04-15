@@ -1,5 +1,7 @@
 ---
-import SiteTitle from "../components/Title.astro";
+import SiteTitle from "@components/Title.astro";
+
+const { title } = Astro.props ?? "Jan's site";
 ---
 
 <!doctype html>
@@ -9,11 +11,12 @@ import SiteTitle from "../components/Title.astro";
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
-        <title>Jan's Site</title>
+        <title>{title}</title>
     </head>
     <header>
         <SiteTitle />
     </header>
+
     <body>
         <slot />
     </body>
