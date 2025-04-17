@@ -1,9 +1,7 @@
 ---
 import type { GetStaticPaths } from "astro";
-import { getNinetyArticles } from "@lib/article";
+import { getNinetyArticles, marked } from "@lib/article";
 import Main from "@components/Main.astro";
-import { marked } from "marked";
-import aozora from "marked-aozora";
 import type { Article } from "@lib/article";
 import Layout from "@layouts/Layout.astro";
 
