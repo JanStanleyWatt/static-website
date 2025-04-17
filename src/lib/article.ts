@@ -2,7 +2,6 @@ import { getCollection } from "astro:content";
 
 export interface Article {
     title: string;
-    tags: string[];
     date: string;
     slug: string;
     body: string;
