@@ -6,29 +6,25 @@ import type { Article } from "@lib/article";
 import Layout from "@layouts/Layout.astro";
 
 export interface Props {
-    title: string;
-    date: string;
-    body: string;
+  title: string;
+  date: string;
+  body: string;
 }
 
-marked.use({
-    extensions: [aozora()], // Use default option
-});
-
 export const getStaticPaths = (async () => {
-    const ninety = await getNinetyArticles();
-    return ninety.map((article: Article) => {
-        return {
-            params: {
-                slug: article.slug,
-            },
-            props: {
-                title: article.title,
-                date: article.date,
-                body: article.body,
-            },
-        };
-    });
+  const ninety = await getNinetyArticles();
+  return ninety.map((article: Article) => {
+    return {
+      params: {
+        slug: article.slug,
+      },
+      props: {
+        title: article.title,
+        date: article.date,
+        body: article.body,
+      },
+    };
+  });
 }) satisfies GetStaticPaths;
 
 const { title, date, body } = Astro.props;
@@ -37,7 +33,7 @@ const html = marked.parse(body);
 ---
 
 <Layout title={title}>
-    <h1>{title}</h1>
-    <p>{date}</p>
-    <Main body={html} />
+  <h1>{title}</h1>
+  <p>{date}</p>
+  <Main body={html} />
 </Layout>
