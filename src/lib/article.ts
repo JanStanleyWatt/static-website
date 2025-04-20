@@ -25,7 +25,7 @@ export async function getNinetyArticles(): Promise<Article[]> {
     })
     .sort(
       (a: Article, z: Article) =>
-        new Date(z.date).getMilliseconds() - new Date(a.date).getMilliseconds()
+        new Date(z.date).getTime() - new Date(a.date).getTime()
     );
 }
 
