@@ -5,6 +5,8 @@ import Main from "@components/Main.astro";
 import type { Article } from "@lib/article";
 import Layout from "@layouts/HomePageLayout.astro";
 
+import "@styles/global.css";
+
 export interface Props {
   title: string;
   date: string;
@@ -36,4 +38,7 @@ const html = marked.parse(body);
   <h1>{title}</h1>
   <p>{date}</p>
   <Main body={html} />
+  <footer>
+    <p>© 2025 Jan's Site. All rights reserved.</p>
+  </footer>
 </Layout>
