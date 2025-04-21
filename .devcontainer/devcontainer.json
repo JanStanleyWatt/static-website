@@ -27,8 +27,25 @@
 		"vscode": {
 			"extensions": [
 				"astro-build.astro-vscode",
-				"esbenp.prettier-vscode"
-			]
+				"esbenp.prettier-vscode",
+				"bradlc.vscode-tailwindcss"
+			],
+			"settings": {
+				"editor.defaultFormatter": "esbenp.prettier-vscode",
+				"editor.formatOnSave": true,
+				"tailwindCSS.includeLanguages": {
+					"astro": "astro"
+				},
+				"tailwindCSS.experimental.classRegex": [
+					{
+						"name": "astro",
+						"regex": "(class:|className:|class:|className=\\\")([\\w\\s-.:]+)(?=\\\")"
+					}
+				],
+				"files.associations": {
+					"*.css": "tailwindcss"
+				}
+			}
 		},
 		"mounts": []
 	}
