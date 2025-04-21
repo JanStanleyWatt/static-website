@@ -1,5 +1,6 @@
 ---
 const { body } = Astro.props;
+import "@styles/global.css";
 ---
 
-<main set:html={body} />
+<main><div class="prose" set:html={body} /></main>

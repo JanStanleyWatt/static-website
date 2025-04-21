@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
 import tailwindcss from "@tailwindcss/vite";
 
@@ -8,10 +8,10 @@ export default defineConfig({
   site: "https://www.jan-s-watt.jp",
 
   server: {
-      host: "127.0.0.1"
+    host: "127.0.0.1",
   },
 
   vite: {
-    plugins: [tailwindcss()]
-  }
+    plugins: [tailwindcss()],
+  },
 });
