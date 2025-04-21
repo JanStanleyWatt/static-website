@@ -32,7 +32,7 @@ const { title, date, body } = Astro.props;
 const html = marked.parse(body);
 ---
 
-<Layout title={title}>
+<Layout title="90%からはじめるWeb管理者">
   <h1>{title}</h1>
   <p>{date}</p>
   <Main body={html} />

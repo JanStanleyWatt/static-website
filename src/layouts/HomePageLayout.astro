@@ -18,11 +18,11 @@ const siteTitle =
     <meta name="generator" content={Astro.generator} />
     <title>{siteTitle}</title>
   </head>
-  <header>
-    <SiteTitle />
-  </header>
 
-  <body class="markdown-body">
+  <body>
+    <header>
+      <SiteTitle title={title} />
+    </header>
     <slot />
   </body>
 
